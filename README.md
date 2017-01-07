@@ -1,2 +1,2 @@
 # Bootstrap
-Exercises
+Examples, Theme etc.
