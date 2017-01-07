@@ -7,7 +7,19 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> <!--from Google's Font Library-->
   <style type="text/css">
+    body {
+      font: 20px "Montserrat", sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+    }
+    p {
+      font-size: 20px;
+    }
+    .margin {
+      margin-bottom: 45px;
+    }
     .bg-green {
       background-color: #3FEF79;
       color: white;
@@ -24,14 +36,60 @@
       padding-top: 50px;
       padding-bottom: 50px; 
     }
+    .navbar .container , .navbar-brand{
+      padding-top: 15px;
+      padding-bottom: 15px; 
+      border: 0;
+      border-right: 0; 
+      margin-bottom: 0;
+      font-size: 25px;
+      letter-spacing: 5px;
+    }
+    .navbar-default {
+      margin: 0;
+    }
+    .navbar-nav li a:hover  {
+      background-color: #2B3330 !important;
+      color: #E7E3E3 !important;
+    }
+    .navbar-brand:hover {
+      background-color: #2B3330 !important;
+      color: #E7E3E3 !important;
+    }
+    .bg-footer {
+      padding-top: 25px;
+      padding-bottom: 15px;
+      background-color: #7B7777;
+      color: #EDF3F0;
+    }
   </style>
 </head>
 <body>
 
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Me</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">WHO</a></li>
+        <li><a href="#">WHAT</a></li>
+        <li><a href="#">WHERE</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
 <div class="container bg-green text-center">
   <h3>Who Am I?</h3>
   <img src="bird.jpg" class="img-responsive img-circle" style="display: inline" alt="Bird">
-  <h3>I,m an adventurer</h3>
+  <h3>I'm an adventurer</h3>
 </div>
 
 <div class="container bg-grey text-center">
@@ -46,18 +104,22 @@
   <div class="row">
     <div class="col-sm-4">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="birds1.jpg" class="img-responsive" style="width: 100%" alt="Image">
+      <img src="birds1.jpg" class="img-responsive margin" style="width: 100%" alt="Image">
     </div>
     <div class="col-sm-4">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="birds2.jpg" class="img-responsive" style="width: 100%" alt="Image">
+      <img src="birds2.jpg" class="img-responsive margin" style="width: 100%" alt="Image">
     </div>
     <div class="col-sm-4">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="birds3.jpg" class="img-responsive" style="width: 100%" alt="Image">
+      <img src="birds3.jpg" class="img-responsive margin" style="width: 100%" alt="Image">
     </div>
   </div>
 </div>
+
+<footer class="container bg-footer text-center">
+  <p>Bootstrap Theme Made by &copy; Petyo Mitkov</p>
+</footer>
 
 </body>
 </html>
