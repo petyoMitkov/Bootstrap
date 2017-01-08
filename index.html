@@ -7,17 +7,60 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <script src="//code.jquery.com/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <style type="text/css">
+    .bg-petyoHeader {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      background-color: #1F1818;
+      color: #FFFFFF;
+    }
+    .bg-primary {
+      padding-top: 20px;
+      padding-bottom: 220px;
+      color: white; 
+      border: 0;
+    }
+    a:hover {
+      background-color: #53D4CF;
+    }
+    .col-sm-4 {
+      text-align: center;
+      padding-bottom: 40px;
+    }
+    .footer {
+      padding-top: 10px;
+      padding-bottom: 30px;
+      background-color: #C5C0C0;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
 
-  <div class="container bg-success">
-    <button class="btn btn-info" onclick="liksSimplyMe()">Link to Page "SimplyMe"</button>
+  <div class="container bg-petyoHeader">
+    <h1>Petyo Mitkov Projects Page</h1>
+  </div>
+  
+  <div class="container bg-primary">
+    <div class="row">
+      <div class="col-sm-4">
+        <a href="00. My FIrst Bootstrap/index.html" class="btn">
+        <img src="firstBootstrap.jpg" class="img img-responsive">         
+        </a>
+        <span><br>My First Bootstrap </span>
+     </div>
+      <div class="col-sm-4">
+        <a href="01. Bootstrap Theme Simply Me/index.html" class="btn">
+        <img src="SimplyMe.jpg" class="img img-responsive">
+        </a>
+        <span><br>Theme Simply Me </span>
+     </div>     
+    </div>  
   </div>
 
-  <script type="text/javascript">
-    function liksSimplyMe() {
-      window.location = "01. Bootstrap Theme Simply Me/index.html";
-    }
-  </script>
+  <footer class="footer container">
+    <h5>Made by &copy;Petyo Mitkov</h5>
+  </footer>
+  
 </body>
 </html>
