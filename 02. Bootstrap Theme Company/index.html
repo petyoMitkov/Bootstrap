@@ -11,62 +11,7 @@
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-  <style type="text/css">
-    .jumbotron {
-      background-color: #FE580F;
-      color: #FFFFFF;
-      padding: 100px 25px;
-    }
-    .container-fluid {
-      padding: 60px 50px;
-    }
-    .bg-grey {
-      background-color: #E6E6E6;
-    }
-    .logo {
-      font-size: 200px;
-    }
-    .logo-small {
-      color: #FE580F;
-      font-size: 50px;
-    }
-    .thumbnail {
-      padding: 0 0 15px 0;
-      border: none;
-      border-radius: 0;
-    }
-    .thumbnail img {
-      width: 100%;
-      height: 100%;
-      margin-bottom: 10px;
-    }
-    .carousel-control.right, .carousel-control.left {
-      background-image: none;
-      color: #FE580F;
-    }
-    .carousel-indicators li {
-      border-color: #FE580F;
-    }
-    .carousel-indicators li.active {
-      background-color: #FE580F;
-    }
-    .item h4 {
-      font-size: 19px;
-      line-height: 1.375em;
-      font-weight: 400;
-      font-style: italic;
-      margin: 70px 0;
-    }
-    .item span {
-      font-style: normal;
-    }
-    @media screen and (max-width: 768px) {
-      .col-sm-4 {
-        text-align: center;
-        margin: 25px 0;
-      }
-    }
-  </style>
+  <link rel="stylesheet" type="text/css" href="Style.css">
 </head>
 <body>
 
@@ -221,6 +166,124 @@
   </div>
 </div>
 
+<!--Pricing Container-->
+<div class="container-fluid">
+  <div class="text-center">
+    <h2>Pricing</h2>
+    <h4>Choose a paymant plan that works for you</h4>
+  </div>
+  <div class="row">
+    <div class="col-sm-4"> <!--Panel 1-->
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Basic</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>20</strong> Lorem</p>
+          <p><strong>15</strong> Ipsum</p>
+          <p><strong>5</strong> Dolor</p>
+          <p><strong>2</strong> Sit</p>
+          <p><strong>Endless</strong> Amet</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$19</h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">Sign Up</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4"> <!--Panel 2-->
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Pro</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>50</strong> Lorem</p>
+          <p><strong>25</strong> Ipsum</p>
+          <p><strong>10</strong> Dolor</p>
+          <p><strong>5</strong> Sit</p>
+          <p><strong>Endless</strong> Amet</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$29</h3>
+          <h4>per month</h4>
+          <div class="btn btn-lg text-center">Sign Up</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4"> <!--Panel 3-->
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Premium</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>100</strong> Lorem</p>
+          <p><strong>50</strong> Ipsum</p>
+          <p><strong>25</strong> Dolor</p>
+          <p><strong>10</strong> Sit</p>
+          <p><strong>Endless</strong>Amet</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$49</h3>
+          <h4>per month</h4>
+          <div class="btn btn-lg text-center">Sign Up</div>
+        </div>
+      </div>
+    </div> 
+  </div>
+</div>
+
+<!--Contact Container-->
+<div class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact us and we'll get back you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Chikago, US</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
+    </div>
+    <div class="col-sm-7">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="text" required>
+        </div>
+        <textarea class="form-control" id="comments" name="comments" placeholder="Comments" rows="5"></textarea>
+        <br>
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>      
+    </div>
+  </div>
+</div>
+
+
+<!--Petyo Map-->
+<div class="container-fluid" id="map" style="width:90%;height:300px;"></div>
+<script>
+  function initMap() {
+    var uluru = {lat: 42.665180, lng: 23.399726};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 13,
+      scrollwheel:false, //
+      draggable:true,
+      center: uluru,
+      mapTypeId: google.maps.MapTypeId.ROADMAP  //SATELLITE, HYBRID, and TERRAIN.
+    });
+    var marker = new google.maps.Marker({
+      position: uluru,
+      map: map
+    });
+  }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAv8D3AssSgcPfFNPYuGO_dnhlbXXvrq8o&callback=initMap">
+  //get key from Google API 
+</script>
 
 </body>
 </html>
