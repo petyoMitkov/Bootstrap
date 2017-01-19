@@ -235,7 +235,7 @@
 
 <!--Contact Container-->
 <div class="container-fluid bg-grey">
-  <h2 class="text-center">CONTACT</h2>
+  <h2 class="text-center contactHeading">CONTACT</h2> 
   <div class="row">
     <div class="col-sm-5">
       <p>Contact us and we'll get back you within 24 hours.</p>
@@ -254,23 +254,27 @@
         <textarea class="form-control" id="comments" name="comments" placeholder="Comments" rows="5"></textarea>
         <br>
         <div class="col-sm-12 form-group">
-          <button class="btn btn-default pull-right" type="submit">Send</button>
+          <button class="btn btn-default" type="submit">Send</button>
         </div>
       </div>      
     </div>
   </div>
 </div>
 
+<!--Google Maps-->
+<div class="container-fluid" id="map" style="width:90%; height:400px;"></div>
 
-<!--Petyo Map-->
-<div class="container-fluid" id="map" style="width:90%;height:300px;"></div>
+<!--Footer-->
+<div class="footer text-center">
+  <p>Example from W3Schools.com modified by <br>&copy; Petyo Mitkov</p>
+</div>
+
 <script>
   function initMap() {
     var uluru = {lat: 42.665180, lng: 23.399726};
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 13,
-      scrollwheel:false, //
-      draggable:true,
+      scrollwheel:false, 
       center: uluru,
       mapTypeId: google.maps.MapTypeId.ROADMAP  //SATELLITE, HYBRID, and TERRAIN.
     });
