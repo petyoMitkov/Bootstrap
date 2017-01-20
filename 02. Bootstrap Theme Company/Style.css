@@ -120,7 +120,7 @@
 .panel .btn:hover {
   background-color: #FFFFFF;
   color: #FE580F;
-  border: 1px solid #FE580F;;
+  border: 1px solid #FE580F;
 }
 
 /*Contact section*/
@@ -147,11 +147,63 @@
 }
 
 /*Footer*/
-.footer {
-  padding: 50px 0;
-  background-color: #3A3636;
-  color: #FFFFFF;
+footer.container-fluid.text-center {
+  padding-top: 40px;
 }
+footer .glyphicon {
+  font-size: 20px;
+  margin-bottom: 34px;
+  padding: 5px 80px 5px 80px;
+  color: #FE580F;
+  border: 4px double #FE580F;
+}
+footer .glyphicon:hover {
+  background-color:  #FE580F;
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+}
+footer a {
+  color: #0E8314;
+}
+footer a:visited {
+  color: #0E8314;
+}
+footer a:hover {
+  color: #27B02D;
+}
+footer a:active {
+  color: #FE580F;
+}
+
+/*Set external Font*/
+body {
+  font: 400 15px Lato, sans-serif;
+  line-height: 1.8;
+  color: #818181;
+}
+.jumbotron {
+  font-family: Montserrat, sans-serif;
+}
+.navbar {
+  font-family: Montserrat, sans-serif;
+}
+
+/*Added some extra style to some elements*/
+h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #303030;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
 
 @media screen and (max-width: 768px) {
   .col-sm-4 {
