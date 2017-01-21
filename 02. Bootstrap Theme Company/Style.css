@@ -125,8 +125,8 @@
 
 /*Contact section*/
 .contactHeading {
-    padding-bottom: 30px;
-  }
+  padding-bottom: 30px;
+}
 .form-group { 
   padding-left: 0;
 }
@@ -141,9 +141,9 @@
   padding: 0;
 }
 .form-group .btn {
-    width: 30%;    
-    background-color: #FBFAF7;
-    color: #FE580F;
+  width: 30%;    
+  background-color: #FBFAF7;
+  color: #FE580F;
 }
 
 /*Footer*/
@@ -204,6 +204,41 @@ h4 {
     margin-bottom: 30px;
 }
 
+/*Slideanim - animation slide in Elements*/
+.slideanim {visibility: hidden;}
+.slide {
+  /*The name of the animation*/
+  animation-name: slide;
+  -webkit-animation-name: slide;
+  /*The duration of the animation*/
+  animation-duration: 3s;
+  -webkit-animation-duration: 3s;
+  /*Make the element visible*/
+  visibility: visible;
+}
+/* Go from 0% to 100% opacity (see-through) 
+and specify the percentage from when to 
+slide in the element along the Y-axis */
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateX(40%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
 
 @media screen and (max-width: 768px) {
   .col-sm-4 {

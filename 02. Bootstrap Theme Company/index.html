@@ -67,7 +67,7 @@
       <p>Lorem ipsum..</p>
       <button class="btn btn-default btn-lg">Get in Touch</button>
     </div> 
-    <div class="col-sm-4">
+    <div class="col-sm-4 slideanim">
       <span class="glyphicon glyphicon-signal logo"></span>
     </div>
   </div>
@@ -76,7 +76,7 @@
 <!--Our Values Section-->
 <div class="container-fluid bg-grey">
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-4 slideanim">
       <span class="glyphicon glyphicon-globe logo"></span>
     </div>
     <div class="col-sm-8">
@@ -93,17 +93,17 @@
   <h4>What we offer</h4>
   <br>
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-4 slideanim">
       <span class="glyphicon glyphicon-off logo-small"></span>
       <h4>POWER</h4>
       <p>Lorem ipsum dolor sit amet..</p>
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-4 slideanim">
       <span class="glyphicon glyphicon-heart logo-small"></span>
       <h4>LOVE</h4>
       <p>Lorem ipsum dolor sit amet..</p>
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-4 slideanim">
       <span class="glyphicon glyphicon-lock logo-small"></span>
       <h4>JOB DONE</h4>
       <p>Lorem ipsum dolor sit amet..</p>
@@ -111,17 +111,17 @@
   </div>
   <br><br>
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-4 slideanim">
       <span class="glyphicon glyphicon-leaf logo-small"></span>
       <h4>GREEN</h4>
       <p>Lorem ipsum dolor sit amet..</p>
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-4 slideanim">
       <span class="glyphicon glyphicon-certificate logo-small"></span>
       <h4>SERTIFIED</h4>
       <p>Lorem ipsum dolor sit amet..</p>
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-4 slideanim">
       <span class="glyphicon glyphicon-wrench logo-small"></span>
       <h4>HARD WORK</h4>
       <p>Lorem ipsum dolor sit amet..</p>
@@ -204,7 +204,7 @@
   </div>
   <div class="row">
     <div class="col-sm-4"> <!--Panel 1-->
-      <div class="panel panel-default text-center">
+      <div class="panel panel-default text-center slideanim">
         <div class="panel-heading">
           <h1>Basic</h1>
         </div>
@@ -223,7 +223,7 @@
       </div>
     </div>
     <div class="col-sm-4"> <!--Panel 2-->
-      <div class="panel panel-default text-center">
+      <div class="panel panel-default text-center slideanim">
         <div class="panel-heading">
           <h1>Pro</h1>
         </div>
@@ -242,7 +242,7 @@
       </div>
     </div>
     <div class="col-sm-4"> <!--Panel 3-->
-      <div class="panel panel-default text-center">
+      <div class="panel panel-default text-center slideanim">
         <div class="panel-heading">
           <h1>Premium</h1>
         </div>
@@ -292,12 +292,12 @@
 </div>
 
 <!--Google Maps-->
-<div class="container-fluid" id="map" style="width:90%; height:400px;"></div>
+<div class="container-fluid slideanim" id="map" style="width:90%; height:400px;"></div>
 
 <!--Footer-->
 <footer class="container-fluid text-center">
   <a href="#myPage" title="To Top">
-    <span class="glyphicon glyphicon-chevron-up"></span>
+    <span class="glyphicon glyphicon-chevron-up slideanim"></span>
   </a>
   <p>Bootstrap Theme from <a href="http://www.w3schools.com" title="Visit w3schools.com">w3schools.com</a><br>modified by Petyo Mitkov</p>
 </footer>
@@ -322,8 +322,9 @@
   //get key from Google API 
 </script>
 
-<!--Add smooth scrolling-->
+<!--Add smooth scrolling & Animation Elements-->
 <script> 
+  //Add smooth scrolling
   $(document).ready(function() {
     //Add smooth scrolling to all links in navbar + footer link
     $(".navbar a, footer a[href='#myPage']").on("click", function(event) {
@@ -336,13 +337,28 @@
         // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
         $("html, body").animate({
           scrollTop: $(hash).offset().top
-        }, 1900, function() {
+        }, 800, function() {
           // Add hash (#) to URL when done scrolling (default click behavior)
           window.location.hash = hash;
         });
       } //End if
     });
+
+    //Animation Elements - Slide in Elements
+    $(window).scroll(function() {
+      $(".slideanim").each(function() {
+        let pos = $(this).offset().top;
+
+        let winTop = $(window).scrollTop();
+
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+      });    
+    });
+
   });
+
 </script>
 
 </body>
